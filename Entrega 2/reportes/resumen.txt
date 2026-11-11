@@ -1,0 +1,32 @@
+
+FUENTES DE LOS DATOS
+--------------------------------------------------
+CSV: https://huggingface.co/datasets/mstz/student_performance/blob/main/math/train.csv
+JSON: https://huggingface.co/datasets/hehuanhao/fusion-dataset/blob/main/math23k/train.json
+
+ARCHIVOS IMPORTADOS
+--------------------------------------------------
+student_performance_original.csv
+math23k_original.json
+
+MODIFICACIONES REALIZADAS
+--------------------------------------------------
+CSV: Se modificó reading_score del primer registro de 70 a 95.
+JSON: Se modificó el campo system del primer registro, que estaba vacío.
+
+CANTIDAD DE REGISTROS
+--------------------------------------------------
+CSV: 1000
+JSON: 200
+
+CLASES Y METODOS UTILIZADOS
+--------------------------------------------------
+ManejadorCSV: importar_csv(), modificar_valor(), guardar_csv().
+ManejadorJSON: importar_json(), modificar_registro(), guardar_json().
+GeneradorResumen: agregar_seccion(), generar_resumen().
+
+ARCHIVOS GENERADOS
+--------------------------------------------------
+datos/student_performance_modificado.csv
+datos/math23k_modificado.json
+reportes/resumen.txt
